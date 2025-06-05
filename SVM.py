@@ -6,14 +6,12 @@ from sklearn.preprocessing import StandardScaler, LabelEncoder
 from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_score
 from sklearn.metrics import accuracy_score
 
-# Load dataset (Ensure CSV file is correctly formatted)
-df = pd.read_csv("breast-cancer.csv")  # Replace with actual dataset file
+df = pd.read_csv("breast-cancer.csv")  
 
 # Drop 'id' column if present
 if 'id' in df.columns:
     df.drop(columns=['id'], inplace=True)
 
-# Convert categorical target ('diagnosis') to numerical (if needed)
 if df['diagnosis'].dtype == 'object':  # If it's a string, encode it
     label_encoder = LabelEncoder()
     df['diagnosis'] = label_encoder.fit_transform(df['diagnosis'])  # Maps 'B' → 0, 'M' → 1
