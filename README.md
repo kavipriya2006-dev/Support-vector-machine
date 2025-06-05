@@ -1,0 +1,2 @@
+# Support-vector-machine
+To apply SVM, first prepare and clean the data, ensuring features are scaled for better performance. Then, split the data into training and testing sets to evaluate generalization. Choose an appropriate kernel (linear for simple data, RBF for complex cases) and train the model. Next, tune hyperparameters like C and gamma using GridSearchCV for optimal accuracy. Finally, evaluate the model using metrics like accuracy and F1-score, and visualize the decision boundary if the data is 2D
